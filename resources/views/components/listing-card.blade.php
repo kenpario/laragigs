@@ -2,7 +2,7 @@
 
 <div class="dark:bg-gray-800 bg-gray-200 dark:text-white rounded-lg p-6 shadow-lg">
     <div class="flex">
-        <img class="hidden w-48 mr-6 md:block" src="{{asset('images/no-image.png')}}" alt="" />
+        <img class="hidden w-48 mr-6 md:block rounded-lg" src="{{ $listing->logo ? asset('storage/' . $listing->logo) : asset('/images/no-image.png')}}" alt="{{ $listing->company }}" />
         <div>
             <h3 class="text-2xl">
                 <a href="/listings/{{ $listing->id }}">{{$listing->title}}</a>
